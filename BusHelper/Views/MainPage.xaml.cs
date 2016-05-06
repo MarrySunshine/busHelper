@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusHelper.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,15 @@ namespace BusHelper
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private BusInfoService busInfoService = BusInfoService.Instance;
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private async void button_Click(object sender, RoutedEventArgs e)
+        {
+            var result = await busInfoService.getBusInfo("广州", "B4");
         }
     }
 }
