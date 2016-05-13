@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+<<<<<<< HEAD
 using Windows.UI.Xaml.Controls.Maps;
 using Windows.Devices.Geolocation;
 using Windows.UI.Core;
@@ -21,6 +22,8 @@ using Windows.Storage.Streams;
 using System.Threading;
 using System.Threading.Tasks;
 using Windows.UI;
+=======
+>>>>>>> 00880453eb5ec22abc24cc8c7a99f70ff4e4791f
 
 //“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
 
@@ -32,6 +35,7 @@ namespace BusHelper
     public sealed partial class MainPage : Page
     {
         private BusInfoService busInfoService = BusInfoService.Instance;
+<<<<<<< HEAD
 
         //private MainPage rootPage = MainPage.current;
         private double lati;
@@ -333,5 +337,16 @@ namespace BusHelper
         {
             var result = await busInfoService.getBusInfo("广州", "B4");
         }*/
+=======
+        public MainPage()
+        {
+            this.InitializeComponent();
+        }
+
+        private async void button_Click(object sender, RoutedEventArgs e)
+        {
+            var result = await busInfoService.getBusInfo("广州", "B4");
+        }
+>>>>>>> 00880453eb5ec22abc24cc8c7a99f70ff4e4791f
     }
 }

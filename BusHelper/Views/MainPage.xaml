@@ -5,6 +5,7 @@
     xmlns:local="using:BusHelper"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<<<<<<< HEAD
     xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
@@ -39,4 +40,12 @@
     </Grid>
 
 
+=======
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="215,260,0,0" VerticalAlignment="Top" Click="button_Click"/>
+
+    </Grid>
+>>>>>>> 00880453eb5ec22abc24cc8c7a99f70ff4e4791f
 </Page>

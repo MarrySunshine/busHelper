@@ -11,7 +11,11 @@
     <AssemblyName>BusHelper</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+<<<<<<< HEAD
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+=======
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+>>>>>>> 00880453eb5ec22abc24cc8c7a99f70ff4e4791f
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -113,7 +117,10 @@
     <None Include="BusHelper_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Assets\mappin.png" />
+=======
+>>>>>>> 00880453eb5ec22abc24cc8c7a99f70ff4e4791f
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
