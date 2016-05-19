@@ -1,4 +1,8 @@
 WinMetadata\Windows.winmd
+EntityFramework.Commands.dll
+EntityFramework.Commands.xml
+EntityFramework.Relational.Design.dll
+EntityFramework.Relational.Design.xml
 ApplicationInsights.config
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png

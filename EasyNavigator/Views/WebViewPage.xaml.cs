@@ -69,7 +69,14 @@ namespace EasyNavigator.Views
 
         public async void navigateToPosition(string to_lng, string to_lat)
         {
-            await webView.InvokeScriptAsync("navigateToPosition", new List<string>() { position[0], position[1], to_lng, to_lat });
+            try
+            {
+                await webView.InvokeScriptAsync("navigateToPosition", new List<string>() { position[0], position[1], to_lng, to_lat });
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private async void webView_ScriptNotify(object sender, NotifyEventArgs e)

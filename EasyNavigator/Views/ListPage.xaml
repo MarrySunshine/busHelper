@@ -17,7 +17,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="textBox" Margin="8,32" TextWrapping="Wrap" Text="" TextAlignment="Center" RequestedTheme="Dark" BorderBrush="Black" PlaceholderText="" Background="{x:Null}" KeyUp="textBox_KeyUp" Height="32"/>
+            <TextBox x:Name="textBox" Margin="8,32" TextWrapping="Wrap" Text="" TextAlignment="Center" RequestedTheme="Dark" BorderBrush="Black" PlaceholderText="" Background="{x:Null}" KeyUp="textBox_KeyUp" Height="32" Foreground="Black"/>
         </Grid>
         <ListView x:Name="listView" Grid.Row="1" SelectionChanged="listView_SelectionChanged">
             <ListView.ItemTemplate>

@@ -12,6 +12,35 @@
             <ColumnDefinition Width="320"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="AdaptiveUI">
+                <VisualState x:Name="OnlyLeft">
+                    <VisualState.Setters>
+                        <Setter Target="webViewFrame.(UIElement.Visibility)" Value="Collapsed" />
+                        <Setter Target="listFrame.(Grid.ColumnSpan)" Value="2" />
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="OnlyRight">
+                    <VisualState.Setters>
+                        <Setter Target="listFrame.(UIElement.Visibility)" Value="Collapsed" />
+                        <Setter Target="webViewFrame.(Grid.Column)" Value="0" />
+                        <Setter Target="webViewFrame.(Grid.ColumnSpan)" Value="2" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="AllVisible">
+                    <VisualState.Setters>
+                        <Setter Target="listFrame.(UIElement.Visibility)" Value="Visible" />
+                        <Setter Target="listFrame.(Grid.ColumnSpan)" Value="1" />
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="801" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Frame x:Name="listFrame" Content=""/>
         <Frame x:Name="webViewFrame" Content="" Grid.Column="1"/>
     </Grid>

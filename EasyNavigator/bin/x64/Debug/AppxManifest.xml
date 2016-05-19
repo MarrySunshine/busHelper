@@ -19,6 +19,7 @@
   </Dependencies>
   <Resources>
     <Resource Language="ZH-CN" />
+    <Resource Language="EN-US" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="EasyNavigator.exe" EntryPoint="EasyNavigator.App">

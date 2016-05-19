@@ -92,6 +92,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\TileTemplate.xml" />
     <Content Include="WebPages\libs\jquery.min.js" />
     <Content Include="WebPages\scripts\index.js" />
     <None Include="project.json" />
@@ -102,12 +103,19 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="Libs\DatabaseContext.cs" />
     <Compile Include="Libs\Request.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160519182026_MyFirstMigration.cs" />
+    <Compile Include="Migrations\20160519182026_MyFirstMigration.designer.cs">
+      <DependentUpon>20160519182026_MyFirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schemas\AddressSchema.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="ViewModels\ListPageViewModel.cs" />
     <Compile Include="Views\ListPage.xaml.cs">
@@ -151,6 +159,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

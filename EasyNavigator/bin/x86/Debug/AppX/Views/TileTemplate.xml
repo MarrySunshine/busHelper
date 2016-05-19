@@ -1,0 +1,26 @@
+﻿<tile>
+  <visual>
+
+    <binding template="TileMedium">
+      <text hint-style="body">常去的地方</text>
+      <text></text>
+      <text hint-style="subtitle">Jennifer Parker</text>
+      <text hint-style="captionSubtle">Photos from our trip</text>
+    </binding>
+
+    <binding template="TileWide">
+      <text hint-style="body">常去的地方</text>
+      <text></text>
+      <text hint-style="subtitle">Jennifer Parker</text>
+      <text hint-style="captionSubtle">Photos from our trip</text>
+    </binding>
+
+    <binding template="TileLarge">
+      <text hint-style="body">常去的地方</text>
+      <text></text>
+      <text hint-style="subtitle">Jennifer Parker</text>
+      <text hint-style="captionSubtle">Photos from our trip</text>
+    </binding>
+
+  </visual>
+</tile>

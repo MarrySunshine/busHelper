@@ -32,5 +32,19 @@ namespace EasyNavigator.Models
             this.lat = lat;
         }
 
+        public AddressModel(Schemas.AddressSchema schema)
+        {
+            id = schema.Id;
+            name = schema.Name;
+            type_ = schema.Type;
+            address = schema.Address;
+            this.lng = schema.Lng;
+            this.lat = schema.Lat;
+        }
+
+        public Schemas.AddressSchema ToSchema()
+        {
+            return new Schemas.AddressSchema() { Id = id, Name = name, Type = type_, Address = address, Lng = lng, Lat = lat };
+        }
     }
 }
