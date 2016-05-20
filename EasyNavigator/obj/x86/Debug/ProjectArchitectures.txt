@@ -1,1 +1,0 @@
-C:\hw\5-20\EasyNavigator\EasyNavigator.csproj;x86
