@@ -27,13 +27,18 @@ namespace EasyNavigator.Views
     /// </summary>
     public sealed partial class ListPage : Page
     {
-        public ViewModels.ListPageViewModel viewModel = ViewModels.ListPageViewModel.Instance;
         public ListPage()
         {
             this.InitializeComponent();
             loadRecord();
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key_word"></param>
+        /// <returns></returns>
         private async Task find(string key_word)
         {
             listView.ItemsSource = await SearchService.Instance.getResultByKeyWord(key_word);
