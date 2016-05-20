@@ -40,7 +40,7 @@ namespace EasyNavigator.Views
         }
 
         private string[] position = new string[2];
-
+        //获取当前位置，用经纬度表示
         public async Task<string[]> getLocation()
         {
             var accessStatus = await Geolocator.RequestAccessAsync();
@@ -61,12 +61,12 @@ namespace EasyNavigator.Views
             position[1] = pos.Coordinate.Latitude.ToString();
             return position;
         }
-
+        //设置当前坐标为获取的坐标
         public async Task setLocation()
         {
             await webView.InvokeScriptAsync("setLocation", await getLocation());
         }
-
+        //查询到目标地点的导航路径
         public async void navigateToPosition(string to_lng, string to_lat)
         {
             try
@@ -78,7 +78,7 @@ namespace EasyNavigator.Views
                 return;
             }
         }
-
+        //
         private async void webView_ScriptNotify(object sender, NotifyEventArgs e)
         {
             var result = e.Value.Split('|');

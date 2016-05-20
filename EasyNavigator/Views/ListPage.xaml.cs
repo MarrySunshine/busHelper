@@ -39,11 +39,14 @@ namespace EasyNavigator.Views
         /// </summary>
         /// <param name="key_word"></param>
         /// <returns></returns>
+        ///
+        //对关键字进行查询，把查询到的相似的地点放入list中
         private async Task find(string key_word)
         {
             listView.ItemsSource = await SearchService.Instance.getResultByKeyWord(key_word);
         }
 
+        //选择一个搜索到的地点时，传递给webviewpage要导航的信息，把这个地点存到数据库中，并且修改磁贴
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if ((sender as ListView).SelectedIndex != -1)
@@ -56,7 +59,7 @@ namespace EasyNavigator.Views
                 MainPage.Instance.UpdateTile(target_item);
             }
         }
-
+        //当按下enter按键时，查询textbox中的关键字。
         private async void textBox_KeyUp(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == Windows.System.VirtualKey.Enter)
@@ -64,7 +67,7 @@ namespace EasyNavigator.Views
                 await find((sender as TextBox).Text);
             }
         }
-
+        // 把查询的地址存入数据库中，作为最近去的地点
         private async void saveRecord(AddressModel address)
         {
             using (var db = new DatabaseContext())
@@ -80,7 +83,7 @@ namespace EasyNavigator.Views
                 }
             }
         }
-
+        //从数据库中读取最近去过的地点
         private void loadRecord()
         {
             using (var db = new DatabaseContext())

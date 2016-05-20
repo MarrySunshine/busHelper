@@ -21,7 +21,7 @@ namespace EasyNavigator.Services
         }
 
         private Request request = new Request();
-
+        //对于keyword，搜索地点，把相近的搜索结果放到list中返回。
         public async Task<List<Models.AddressModel>> getResultByKeyWord(string keyWord)
         {
             var param_list = new List<KeyValuePair<string, string>>();

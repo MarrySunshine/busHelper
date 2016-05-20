@@ -48,6 +48,7 @@ namespace EasyNavigator
                 VisualStateManager.GoToState(this, "OnlyLeft", true);
             };
         }
+        //自适应UI部分
         public void ShouldChangeAdaptiveUIState()
         {
             if (AdaptiveUI.CurrentState.Name == "OnlyLeft")
@@ -55,6 +56,7 @@ namespace EasyNavigator
                 VisualStateManager.GoToState(this, "OnlyRight", true);
             }
         }
+        //修改磁贴内容
         public void UpdateTile(Models.AddressModel address)
         {
             var doc = new XmlDocument();
